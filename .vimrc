@@ -1,7 +1,5 @@
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
-source $VIMRUNTIME/mswin.vim
-behave mswin
 execute pathogen#infect()
 let g:vim_markdown_folding_disabled=1
 
@@ -30,11 +28,13 @@ function MyDiff()
     silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
 
+
+colorscheme xoria256
+syntax on
 filetype off
 filetype plugin indent on
 
 set nocompatible
-
 set modelines=0
 set tabstop=4
 set shiftwidth=4
@@ -51,20 +51,25 @@ set wildmode=list:longest
 set visualbell
 set cursorline
 set ttyfast
+
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set undofile
+
 set ff=unix
 set fileformat=unix
 set number
+
 map <C-n> :NERDTreeToggle<CR>
-map <S-A-l> :gg=G<CR>
+
 if has('gui_running')
-    set guifont=Consolas:h12:cANSI
-    colorscheme xoria256
     set guioptions-=T  "remove toolbar"
 endif
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
 
 "====[ Make the 81st column stand out ]====================
 highlight ColorColumn ctermbg=magenta
@@ -82,15 +87,15 @@ let g:EasyMotion_do_mapping = 0 " Disable default mappings
 " " Jump to anywhere you want with minimal keystrokes, with just one key
 " binding.
 " " `s{char}{label}`
- nmap s <Plug>(easymotion-s)
+nmap s <Plug>(easymotion-s)
 " " or
 " " `s{char}{char}{label}`
 " " Need one more keystroke, but on average, it may be more comfortable.
 " nmap s <Plug>(easymotion-s2)
 
 " " Turn on case sensitive feature
- let g:EasyMotion_smartcase = 1
+let g:EasyMotion_smartcase = 1
 
 " " JK motions: Line motions
- map <Leader>j <Plug>(easymotion-j)
- map <Leader>k <Plug>(easymotion-k)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
