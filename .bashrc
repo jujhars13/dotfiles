@@ -12,13 +12,13 @@ usercolor='[0;32m'
 color='[0;94m'       # to make it different to your local bash prompt
 
 function parse_git_branch {
-git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-  }
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
 
-  #short path
-  Time12h="\T"
-  PathShort=\"\W\"
-  PS1=\"\[\e\$cyan\]\$Time12h \$(whoami) \[\e\$cwdcolor\]\$PathShort\[\e\$gitcolor\]\\\$(parse_git_branch) \[\e\$inputcolor\]$ \"
+#short path
+Time12h="\T"
+PathShort=\"\W\"
+PS1=\"\[\e\$cyan\]\$Time12h \$(whoami) \[\e\$cwdcolor\]\$PathShort\[\e\$gitcolor\]\\\$(parse_git_branch) \[\e\$inputcolor\]$ \"
 
 # And some variables
 EDITOR='vim'
