@@ -17,6 +17,8 @@ alias inotify="~/Dropbox/scripts/inotify.sh"
 alias ls="ls -alh --color=auto"
 alias vi="vim"
 alias grep='grep --color=auto'
+alias md-to-docx="~/Dropbox/scripts/markdown-to-docx.sh"
+alias sabd="python /home/sabd-cli/sabd-cli.py"
 #because ubuntu can be pants at times
 alias node='nodejs'
 alias docker='docker.io'
