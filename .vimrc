@@ -99,3 +99,7 @@ let g:EasyMotion_smartcase = 1
 " " JK motions: Line motions
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+
+" " unmap f1 as it's in a pants position on lenovos and I keep hitting it
+map <F1> <Esc>
+imap <F1> <Esc>
