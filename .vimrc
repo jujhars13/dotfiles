@@ -139,7 +139,7 @@ function! OpenURL()
   endif
 endfunction
 
-" " unmap f1 as it's in a pants position on lenovos and I keep hitting it
+" unmap f1 as it's in a terrible position on lenovo laptops and I keep hitting it by accident
 map <F1> <Esc>
 imap <F1> <Esc>
 
