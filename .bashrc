@@ -28,7 +28,7 @@ Time12a="\@"
 PathShort="\W"
 
 #short path
-PS1="\[\e$Yellow\]$Time12h $(whoami)@\h \[\e$cwdcolor\]$PathShort\[\e$gitcolor\]\$(parse_git_branch) \[\e$inputcolor\]$ "
+PS1="\[\e$Yellow\]$Time12h $(whoami)@\[\e$Purple\]\h \[\e$cwdcolor\]$PathShort\[\e$gitcolor\]\$(parse_git_branch) \[\e$inputcolor\]$ "
 
 # And some variables
 EDITOR='vim'
